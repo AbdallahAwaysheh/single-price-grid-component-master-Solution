@@ -1,0 +1,133 @@
+html{
+    box-sizing: border-box;
+}
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(204, 43%, 93%);
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-size: 16px;
+    font-style: normal;
+
+}   
+main{
+    display: grid;
+    grid-template-rows: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas : 
+    "head head "
+    "mon why"
+    ;
+    margin-bottom: 20px;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.2), 0 20px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+section{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    
+    
+}
+.item1{
+    grid-area: head;
+    background-color: white;
+    border-radius: 10px 10px 0 0 ;
+}
+.item2{
+    grid-area: mon;
+    border-radius: 0 0 0 10px;
+    background-color: hsl(179, 62%, 43%);
+    color: white;
+}
+.item3{
+    
+    grid-area: why;
+    border-radius: 0 0 10px 0 ;
+    background-color: hsl(179, 61%, 48%);
+    color: white;
+}
+.item1 h2{
+    color: hsl(179, 62%, 43%);
+}
+.item1 h3{
+    color:hsl(71, 73%, 54%) ;
+    font-weight: 700;
+}
+.button{
+    background-color: hsl(71, 73%, 54%);
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.item1 .par{
+    line-height: 1.5;
+    color: hsl(218, 22%, 67%);
+    font-weight: 400;
+}
+.par{
+    line-height: 1.5;
+    color: hsl(204, 43%, 93%);
+    font-weight: 200;
+}
+
+#dollar{
+    font-size: 30px;
+    font-weight: 700;
+    
+}
+.a{
+    margin-bottom: 10px;
+}
+#full{
+    color: hsl(204, 43%, 93%);
+    font-weight: 300;
+    
+}
+.cost{
+    margin: 10px 0;
+}
+/* -------------------------- */
+@media only screen and (max-width: 768px){
+    main{
+        grid-template-rows: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr;
+        grid-template-areas : 
+        "head "
+        "mon "
+        "why";
+
+    }
+    section{
+        justify-content: space-around;
+    }
+    .item1{
+        border-radius: 10px 10px 0 0;
+    }
+    .item2{
+        border-radius: 0;
+    }
+
+    
+
+}
+
+
